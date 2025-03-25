@@ -5,6 +5,10 @@ pipeline {
         }
     }
 
+    environment {
+        SELENIUM_GRID_URL = "http://192.168.1.55:4444/wd/hub"
+    }
+
 
     stages {
                stage('Install Dependencies') {
