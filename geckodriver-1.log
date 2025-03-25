@@ -1,0 +1,13 @@
+1742898534392	geckodriver	INFO	Listening on 127.0.0.1:64594
+1742898534461	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Users/sayf/.cache/sel ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8c/zdhvs_7d7p57hv_cz_bvdmrc0000gp/T/rust_mozprofilevcBPSN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1742898543417	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1742898544194	Marionette	INFO	Listening on port 64684
+Read port: 64684
+WebDriver BiDi listening on ws://127.0.0.1:64595
+1742898544341	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64595/devtools/browser/7d0cec57-ff89-4a85-8958-e1f9b3b73a2f
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.saucedemo.com."
+1742898548404	Marionette	INFO	Stopped listening on port 64684

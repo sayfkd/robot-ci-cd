@@ -1,0 +1,5 @@
+URL = "https://www.saucedemo.com/"
+USERNAME = "id:user-name"
+PASSWORD = "id:password"
+LOGIN_BTN = "id:login-button"
+ErrorText = "css:h3[data-test='error']"
