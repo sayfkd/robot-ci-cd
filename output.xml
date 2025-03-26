@@ -1,30 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-03-26T11:44:56.210459" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.11.11 on darwin)" generated="2025-03-26T11:49:41.319015" rpa="false" schemaversion="5">
 <suite id="s1" name="Login Template" source="/Users/sayf/Documents/QA/robot framework/templates/login_template.robot">
 <test id="s1-t1" name="login correct" line="10">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2025-03-26T11:44:56.635304" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/' through remote server at 'http://192.168.1.55:4444/wd/hub'.</msg>
-<msg time="2025-03-26T11:45:31.709614" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg time="2025-03-26T11:45:31.710991" level="FAIL">ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</msg>
+<msg time="2025-03-26T11:49:41.650180" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/' through remote server at 'http://192.168.1.55:4444/wd/hub'.</msg>
 <arg>https://www.saucedemo.com/</arg>
 <arg>chrome</arg>
 <arg>remote_url=http://192.168.1.55:4444/wd/hub</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2025-03-26T11:44:56.634409" elapsed="35.103803">ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</status>
+<status status="PASS" start="2025-03-26T11:49:41.649738" elapsed="1.300737"/>
 </kw>
-<status status="FAIL" start="2025-03-26T11:44:56.632217" elapsed="35.106938">Setup failed:
-ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</status>
+<kw name="Login correct">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-26T11:49:42.952452" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>${USERNAME}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-26T11:49:42.951702" elapsed="0.190812"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-26T11:49:43.143507" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>${PASSWORD}</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-26T11:49:43.142981" elapsed="0.186406"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-26T11:49:43.330435" level="INFO">Clicking element 'id:login-button'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-26T11:49:43.329796" elapsed="0.221130"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//span[contains(text(), "Products")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-26T11:49:43.551192" elapsed="0.068142"/>
+</kw>
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2025-03-26T11:49:42.951212" elapsed="0.668404"/>
+</kw>
+<status status="PASS" start="2025-03-26T11:49:41.648096" elapsed="1.971908"/>
 </test>
-<status status="FAIL" start="2025-03-26T11:44:56.216440" elapsed="35.524641"/>
+<status status="PASS" start="2025-03-26T11:49:41.320503" elapsed="2.301323"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Login Template" id="s1" pass="0" fail="1" skip="0">Login Template</stat>
+<stat name="Login Template" id="s1" pass="1" fail="0" skip="0">Login Template</stat>
 </suite>
 </statistics>
 <errors>
