@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-03-26T11:44:56.210459" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Template" source="/Users/sayf/Documents/QA/robot framework/templates/login_template.robot">
+<test id="s1-t1" name="login correct" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-03-26T11:44:56.635304" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/' through remote server at 'http://192.168.1.55:4444/wd/hub'.</msg>
+<msg time="2025-03-26T11:45:31.709614" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-03-26T11:45:31.710991" level="FAIL">ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>remote_url=http://192.168.1.55:4444/wd/hub</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-03-26T11:44:56.634409" elapsed="35.103803">ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</status>
+</kw>
+<status status="FAIL" start="2025-03-26T11:44:56.632217" elapsed="35.106938">Setup failed:
+ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</status>
+</test>
+<status status="FAIL" start="2025-03-26T11:44:56.216440" elapsed="35.524641"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Template" id="s1" pass="0" fail="1" skip="0">Login Template</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
