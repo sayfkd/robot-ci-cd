@@ -1,31 +1,24 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.9-slim'
-            args '-u root:root'
+            image 'ppodgorsek/robot-framework'
         }
     }
-
-    environment {
-        SELENIUM_GRID_URL = "http://192.168.1.55:4444/wd/hub"
-    }
-
 
     stages {
-               stage('Install Dependencies') {
-            steps {
-                    sh 'pip install -r requirements.txt'
+        stage('Install python'){
+                steps {
+                sh'pip freeze > requirements.txt'
+                sh ' python3 -m pip install -r requirements.txt'
             }
         }
-
-         stage('Run Tests') {
+    
+    stage('Run Selenium Tests') {
             steps {
-                script {
-                    sh "robot tests/SauceDemo.robot"
-                }
+                // Exécution des tests avec Selenium
+                sh  'python3 -m robot tests/test_temp.robot'
             }
-        }
-
-
     }
+    }
+
 }
