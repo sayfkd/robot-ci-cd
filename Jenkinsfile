@@ -21,7 +21,7 @@ pipeline {
          stage('Run Tests') {
             steps {
                 script {
-                    sh "python -m robot tests/SauceDemo.robot"
+                    sh "robot tests/SauceDemo.robot"
                 }
             }
         }
